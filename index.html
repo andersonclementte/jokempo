@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Pedra-papel-tesoura</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
@@ -11,6 +12,23 @@
         <div class="score-boarder">
             <div id="jogador-label" class="badge">Jogador</div>
             <div id="cpu-label" class="badge">CPU</div>
+            <span id="player-score">0</span>:<span id="cpu-score">0</span>
         </div>
+        <div class="result">
+            <p>Papel cobre pedra, você venceu!</p>
+        </div>
+
+        <div class="choices">
+            <div class="choice" id="p">
+                <img src="./img/icons8-clenched-fist-48.png" alt="">
+            </div>
+            <div class="choice" id="pa">
+                <img src="./img/icons8-hand-48.png" alt="">
+            </div>
+            <div class="choice" id="t">
+                <img src="./img/icons8-hand-scissors-48.png" alt="">
+            </div>
+        </div>
+        <p>Sua vez!</p>
     </body>
 </html>
