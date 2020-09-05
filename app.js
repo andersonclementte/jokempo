@@ -14,19 +14,31 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
+function convertToWord(letter){
+    if (letter == "r") return "Pedra";
+    else if (letter == "p") return "Papel";
+    else return "Tesoura";
+}
+
 function win(userChoice, computerChoice){
     userScore++;
     userScore_span.innerHTML = userScore;
     cpuScore_span.innerHTML = cpuScore;
-    result_p.innerHTML = userChoice + " vence " + computerChoice + ". Você venceu!;"
+    result_p.innerHTML = `${convertToWord(userChoice)} vence ${convertToWord(computerChoice)}. Você venceu!`;
+    document.getElementById(userChoice).classList.add('green-glow');
 }
 
-function lose(){
+function lose(userChoice, computerChoice){
     cpuScore++;
+    userScore_span.innerHTML = userScore;
+    cpuScore_span.innerHTML = cpuScore;
+    result_p.innerHTML = `${convertToWord(userChoice)} perde para ${convertToWord(computerChoice)}. Você perdeu!`;
 }
 
-function draw(){
-    console.log("draw");
+function draw(userChoice, computerChoice){
+    userScore_span.innerHTML = userScore;
+    cpuScore_span.innerHTML = cpuScore;
+    result_p.innerHTML = `${convertToWord(userChoice)} empata com ${convertToWord(computerChoice)}. Empatou!`;
 }
 
 function game(userChoice) {
