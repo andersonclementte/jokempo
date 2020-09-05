@@ -25,7 +25,7 @@ function win(userChoice, computerChoice){
     userScore_span.innerHTML = userScore;
     cpuScore_span.innerHTML = cpuScore;
     result_p.innerHTML = `${convertToWord(userChoice)} vence ${convertToWord(computerChoice)}. Você venceu!`;
-    document.getElementById(userChoice).classList.add('green-glow');
+    //document.getElementById(userChoice).classList.add('green-glow');
 }
 
 function lose(userChoice, computerChoice){
@@ -73,7 +73,7 @@ function main() {
     })
 
     tes_div.addEventListener('click', function(){
-        game("s");
+        game("s")
     })
 }
 
